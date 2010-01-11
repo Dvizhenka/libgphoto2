@@ -21,27 +21,28 @@ At lease one of these should work at any time.
 Step 0: Preparing configuration
 ===============================
 
-If you have obtained your copy of gphoto2 packaged from a .tar.gz or
-.tar.bz2 tarball, SKIP THIS STEP. 
+If you have obtained your copy of libgphoto2 as a .tar.gz or .tar.bz2
+release tarball from the gphoto project's download page, it will have
+been properly packaged and you can SKIP THIS STEP.
 
-If you have obtained libgphoto2 from SVN, then you will have to
-prepare for step 1 (the configuration of the sources) by running
-the autoreconf program.
+If you have obtained libgphoto2 by cloning a git repository, then you
+will have to prepare for step 1 (the configuration of the sources) by
+downloading the m4 macros via "git submodule" and running the
+autoreconf program:
 
-For autoreconf to succeed, you require the following tools:
+    $ git submodule update --init
+    $ autoreconf --install --symlink
+
+For autoreconf to succeed, you require the following tools
 
 	automake
 	autoconf
 	gettext  (possibly from -dev or -devel package)
 	libtool  (possibly from -dev or -devel package)
 
-in versions compatible with each other and with libgphoto2. Most
-combinations on current GNU/Linux systems work, whereas BSD systems
-tend to have some compatibility problems.
-
-We recommend you call autoreconf like this:
-
-    $ autoreconf --install --symlink
+installed in versions compatible with each other and with
+libgphoto2. Most combinations on current GNU/Linux systems work,
+whereas BSD systems tend to have some compatibility problems.
 
 
 =============================
