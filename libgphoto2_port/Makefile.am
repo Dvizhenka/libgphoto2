@@ -25,7 +25,7 @@ udevscript_PROGRAMS =
 bin_SCRIPTS = gphoto2-port-config
 
 # The . stands for the current dir, i.e. the iolibs to build.
-SUBDIRS = po libgphoto2_port test . doc m4
+SUBDIRS = po libgphoto2_port test . doc m4m
 
 
 ########################################################################
@@ -68,7 +68,7 @@ EXTRA_DIST +=   		\
 
 doc_DATA = AUTHORS README NEWS
 
-ACLOCAL_AMFLAGS = -I auto-m4 -I m4
+ACLOCAL_AMFLAGS = -I auto-m4 -I m4m
 
 EXTRA_DIST    += libgphoto2_port.pc.in
 pkgconfig_DATA = libgphoto2_port.pc
